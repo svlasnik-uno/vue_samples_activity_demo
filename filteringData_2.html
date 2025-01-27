@@ -52,7 +52,8 @@
 			</table>
 
 		</div>
-		<script src="https://unpkg.com/vue"></script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 		<script type="text/javascript">
   const app = Vue.createApp({
     el: '#app',
@@ -260,9 +261,7 @@
             "registered": "2016-05-30T01:57:47 "
           }
         ],
-
         currency: '$',
-
         filterField: '',
         filterQuery: '',
         filterUserState: ''
@@ -272,28 +271,23 @@
 				activeStatus(person) {
 					return (person.isActive) ? 'Active' : 'Inactive';
 				},
-
 				activeClass(person) {
 					return person.isActive ? 'active' : 'inactive';
 				},
 				filterRow(person) {
 					let result = true;
 					if(this.filterField) {
-
 						if(this.filterField === 'isActive') {
     						result = (typeof this.filterUserState === 'boolean') ? (this.filterUserState === person.isActive) : true;
   						} else {
 							let query = this.filterQuery,
 							field = person[this.filterField];
-
-
 							field = field.toLowerCase();
 							result = field.includes(query.toLowerCase());
 					    }
 					}
 					return result;
 				},
-
 				isActiveFilterSelected() {
 					return (this.filterField === 'isActive');
 				}

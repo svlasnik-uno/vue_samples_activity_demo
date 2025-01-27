@@ -2,14 +2,15 @@
 <html>
 <head>
     <title>Vue v-for Display Data</title>
-    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
 <meta charset="UTF-8">
 </head>
 <body>
     <div id="app">
       <table>
-				<tr v-for="person in people" >
-					<td>{{ person.name }}</td>
+          <tr v-for="person in people" >
+              <td>{{ person.name }}</td>
           <td>{{ person.email }}</td>
           <td>{{ person.balance }}</td>
           <td>{{ person.registered }}</td>

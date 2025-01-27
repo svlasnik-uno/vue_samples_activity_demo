@@ -44,12 +44,13 @@
 					</td>
 					<td>{{ person.balance }}</td>
 					<td>{{ person.registered }}</td>
-					<td v-bind:class="activeClass(person)">
+					<td v-bind:class="activeStatus(person)">
 						{{ activeStatus(person) }}
 					</td>
 				</tr>
 			</table>
 		</div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script>
   const app = Vue.createApp({
     el: '#app',

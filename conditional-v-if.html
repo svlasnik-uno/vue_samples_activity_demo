@@ -14,15 +14,18 @@
            Now you don't
        </div>
     </div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script>
-   const app = new Vue ({ 
+  const app = Vue.createApp({
     el: '#app',
-    
-    data: {
+    data() {
+      return {
         isVisible: true
-        
-        }
-    });
+      }
+    }
+  })
+app.mount('#app')
 </script>
 </body>
 </html> 
